@@ -7,7 +7,7 @@ const ffmpegPath = ffmpegStatic;
 
 const base64ToBuffer = (base64:string) => Buffer.from(base64, 'base64');
 
-async function convertBase64WebMToWAV(base64WebM:string):Promise<string> {
+export async function convertBase64WebMToWAV(base64WebM:string):Promise<string> {
     const webMBuffer = base64ToBuffer(base64WebM);
     const webMStream = new PassThrough();
     const wavStream = new PassThrough();
