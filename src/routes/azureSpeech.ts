@@ -5,6 +5,8 @@ import { v4 as uuidv4 } from "uuid";
 import { diffArrays } from "diff";
 import _ from "lodash";
 import { parseWavBuffer } from "./getWaveData";
+import {array3D} from "../feedback"
+import {getFeedback} from "../feedback"
 
 export const main = async (fileBuffer: Buffer, subKey: string, serviceRegion: string, reference_text: string, studentClass:number) => {
     try {
@@ -47,6 +49,11 @@ export const main = async (fileBuffer: Buffer, subKey: string, serviceRegion: st
             },
             partA_score:{
                 score:0
+            },
+            feedback:{
+            pronunciation:"",
+            fluency:"",
+            prosody:""
             },
 
             words: [] as Object[]
@@ -219,18 +226,24 @@ export const main = async (fileBuffer: Buffer, subKey: string, serviceRegion: st
             })
             const accuracyScore = accuracyScores.length > 0 ? _.mean(accuracyScores) : 0;
             const accuracy_bucket=getBucket(studentClass,accuracyScore)
+            const accuracy_feedback = getFeedback(array3D, studentClass, accuracyScore, "accuracy");
             scoreNumber.accuracy.score = accuracyScore;
             scoreNumber.accuracy.bucket = accuracy_bucket;
+            scoreNumber.feedback.pronunciation = accuracy_feedback;
             
             const fluencyScore = fluencyScores.length > 0 ? _.mean(fluencyScores) : 0;
             const fluency_bucket=getBucket(studentClass,fluencyScore)
+            const fluency_feedback = getFeedback(array3D, studentClass, fluencyScore, "fluency");
             scoreNumber.fluency.score = fluencyScore;
             scoreNumber.fluency.bucket = fluency_bucket;
-
+            scoreNumber.feedback.fluency = fluency_feedback;
+            
             const prosodyScore = prosodyScores.length > 0 ? _.mean(prosodyScores) : 0;
             const prosody_bucket=getBucket(studentClass,prosodyScore)
+            const prosody_feedback = getFeedback(array3D, studentClass, prosodyScore, "prosody");
             scoreNumber.prosody.score = prosodyScore;
             scoreNumber.prosody.bucket = prosody_bucket;
+            scoreNumber.feedback.prosody = prosody_feedback;
 
 
             scoreNumber.words = wordLevelResponse
