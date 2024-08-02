@@ -28,7 +28,7 @@ ReportRouter.use(
 );
 
 interface Report {
-  feedback: ScoreBucket;
+  
   accuracy: ScoreBucket;
   fluency: ScoreBucket;
   comp: ScoreBucket;
@@ -58,8 +58,8 @@ ReportRouter.post(
     const authHeader = req.headers["authorization"];
     const studentClass = req.body.studentClass;
     // const authHeader = req.headers['authorization']
-    console.log(authHeader);
-    console.log("auth wala");
+    // console.log(authHeader);
+    // console.log("auth wala");
     if (!authHeader) {
       return res.status(403).json({ message: "Forbidden" });
     }
@@ -106,7 +106,7 @@ ReportRouter.post(
           return res.status(500).json({ message: "Unable to Get Report" });
         }
         if (mera_data && mera_data.length > 0) {
-          console.log(mera_data);
+          // console.log(mera_data);
           const partB_ka_score = mera_data[0].partB_score;
           const total_again = (partB_ka_score + report.partA_score.score) / 2;
           let final_bucket = "Emergent";
@@ -128,7 +128,7 @@ ReportRouter.post(
                 total:
                   (report.partA_score.score + mera_data[0].partB_score) / 2,
                 grade: final_bucket,
-                feedback:report.feedback
+                
               },
             ])
             .eq("id", mera_data[0].id);
@@ -137,7 +137,7 @@ ReportRouter.post(
             console.log(error);
           } else {
             console.log("MAZE HI MAZE");
-            console.log(data);
+            // console.log(data);
           }
         } else {
           const { data, error } = await supabaseClient
@@ -148,10 +148,10 @@ ReportRouter.post(
                 partA_score: report.partA_score.score,
                 assessment_id,
                 student_id,
-                feedback:report.feedback
+              
               },
             ]);
-          console.log(data);
+          // console.log(data);
         }
 
         res.status(200).json(report);
