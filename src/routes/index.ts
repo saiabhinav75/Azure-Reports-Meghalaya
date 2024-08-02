@@ -131,11 +131,11 @@ ReportRouter.post(
             ])
             .eq("id", mera_data[0].id);
           if (error) {
-            // console.log("MOYE MOYE");
-            // console.log(error);
+            console.log("MOYE MOYE");
+            console.log(error);
           } else {
             console.log("MAZE HI MAZE");
-            console.log(data);
+            // console.log(data);
           }
         } else {
           const { data, error } = await supabaseClient
