@@ -57,8 +57,8 @@ ReportRouter.post(
     const authHeader = req.headers["authorization"];
     const studentClass = req.body.studentClass;
     // const authHeader = req.headers['authorization']
-    console.log(authHeader);
-    console.log("auth wala");
+    // console.log(authHeader);
+    // console.log("auth wala");
     if (!authHeader) {
       return res.status(403).json({ message: "Forbidden" });
     }
@@ -105,7 +105,7 @@ ReportRouter.post(
           return res.status(500).json({ message: "Unable to Get Report" });
         }
         if (mera_data && mera_data.length > 0) {
-          console.log(mera_data);
+          // console.log(mera_data);
           const partB_ka_score = mera_data[0].partB_score;
           const total_again = (partB_ka_score + report.partA_score.score) / 2;
           let final_bucket = "Emergent";
@@ -131,8 +131,8 @@ ReportRouter.post(
             ])
             .eq("id", mera_data[0].id);
           if (error) {
-            console.log("MOYE MOYE");
-            console.log(error);
+            // console.log("MOYE MOYE");
+            // console.log(error);
           } else {
             console.log("MAZE HI MAZE");
             console.log(data);
@@ -148,7 +148,7 @@ ReportRouter.post(
                 student_id,
               },
             ]);
-          console.log(data);
+          // console.log(data);
         }
 
         res.status(200).json(report);

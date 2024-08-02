@@ -65,7 +65,7 @@ export const main = async (fileBuffer: Buffer, subKey: string, serviceRegion: st
         const recognitionPromise = new Promise((resolve, reject) => {
             reco.recognizing = function (s, e) {
                 // do Nothing
-                console.log("(recognizing) Reason:", sdk.ResultReason[e.result.reason], "Text:", e.result.text);
+                // console.log("(recognizing) Reason:", sdk.ResultReason[e.result.reason], "Text:", e.result.text);
             };
  
             reco.recognized = function (s, e) {
