@@ -28,7 +28,7 @@ ReportRouter.use(
 );
 
 interface Report {
-  
+  feedback:ScoreBucket,
   accuracy: ScoreBucket;
   fluency: ScoreBucket;
   comp: ScoreBucket;
@@ -128,7 +128,7 @@ ReportRouter.post(
                 total:
                   (report.partA_score.score + mera_data[0].partB_score) / 2,
                 grade: final_bucket,
-                
+                feedback:report.feedback
               },
             ])
             .eq("id", mera_data[0].id);
@@ -148,7 +148,7 @@ ReportRouter.post(
                 partA_score: report.partA_score.score,
                 assessment_id,
                 student_id,
-              
+                feedback:report.feedback
               },
             ]);
           // console.log(data);
