@@ -77,7 +77,7 @@
   export const array_3d = [
     [
         [
-            "Student_Name needs lots of practice in Vocabulary",
+            "Needs lots of practice in Vocabulary",
             "Needs a lot of practice",
             "Needs a lot of practice",
         ],

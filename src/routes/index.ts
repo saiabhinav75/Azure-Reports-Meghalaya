@@ -12,6 +12,7 @@ dotenv.config();
 import { Buffer } from "node:buffer";
 import { main } from "./azureSpeech";
 import { convertBase64WebMToWAV } from "./webmtowav";
+import { UpdateRCASLJ } from "./updateSLJ";
 
 // const port = 3000;
 const ReportRouter: Express = express();
@@ -20,7 +21,7 @@ const supabaseKey = process.env.supabaseKey!;
 // const supabaseClient = createClient(supabaseUrl, supabaseKey);
 const subscriptionKey = "c07451709ffe4fe3862595c6703763dd";
 const serviceRegion = "eastus";
-let supabaseClient: SupabaseClient<any, "public", any>;
+export let supabaseClient: SupabaseClient<any, "public", any>;
 
 ReportRouter.use(express.json({ limit: "50mb" }));
 ReportRouter.use(
@@ -56,7 +57,7 @@ ReportRouter.post(
   "/get-report",
   (req, res, next) => {
     const authHeader = req.headers["authorization"];
-    const studentClass = req.body.studentClass;
+    // const studentClass = req.body.studentClass;
     // const authHeader = req.headers['authorization']
     // console.log(authHeader);
     // console.log("auth wala");
@@ -82,6 +83,7 @@ ReportRouter.post(
     const student_id = req.body.student_id;
     const assessment_id = req.body.assessment_id;
     const studentClass = req.body.studentClass;
+    const assessmentType = req.body.assessmentType;
     // const token = authHeader && authHeader.split(' ')[1]
 
     if (!base64Audio) {
@@ -111,9 +113,9 @@ ReportRouter.post(
           const total_again = (partB_ka_score + report.partA_score.score) / 2;
           let final_bucket = "Emergent";
 
-          if (total_again >= 0 && total_again <= 4.99) {
+          if (total_again >= 0 && total_again <= 49.9) {
             final_bucket = "Emergent";
-          } else if (total_again >= 5 && total_again <= 7.99) {
+          } else if (total_again >= 50 && total_again <= 79.9) {
             final_bucket = "Transitional";
           } else {
             final_bucket = "Proficient";
@@ -138,6 +140,7 @@ ReportRouter.post(
           } else {
             console.log("MAZE HI MAZE");
             // console.log(data);
+            await UpdateRCASLJ(assessmentType,student_id,final_bucket,studentClass)
           }
         } else {
           const { data, error } = await supabaseClient
@@ -151,7 +154,13 @@ ReportRouter.post(
                 feedback:report.feedback
               },
             ]);
-          // console.log(data);
+          if (error) {
+            console.log("MOYE MOYE");
+            console.log(error);
+          } else {
+            console.log("MAZE HI MAZE");
+            // console.log(data);
+          }
         }
 
         res.status(200).json(report);

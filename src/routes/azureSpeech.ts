@@ -249,7 +249,6 @@ export const main = async (fileBuffer: Buffer, subKey: string, serviceRegion: st
             scoreNumber.words = wordLevelResponse
 
             let last_score=(accuracyScore+fluencyScore+prosodyScore)/3
-            last_score=last_score/10
             scoreNumber.partA_score.score=last_score
 
             return scoreNumber;
