@@ -224,21 +224,24 @@ export const main = async (fileBuffer: Buffer, subKey: string, serviceRegion: st
                     wordLevelOutput += `\t\t\t\terror type: ${word.PronunciationAssessment.ErrorType};`;
                 }
             })
-            const accuracyScore = accuracyScores.length > 0 ? _.mean(accuracyScores) : 0;
+            let accuracyScore = accuracyScores.length > 0 ? _.mean(accuracyScores) : 0;
+            accuracyScore=Math.ceil(accuracyScore)
             const accuracy_bucket=getBucket(studentClass,accuracyScore)
             const accuracy_feedback = getFeedback(array_3d, studentClass, accuracyScore, "accuracy");
             scoreNumber.accuracy.score = accuracyScore;
             scoreNumber.accuracy.bucket = accuracy_bucket;
             scoreNumber.feedback.pronunciation = accuracy_feedback;
             
-            const fluencyScore = fluencyScores.length > 0 ? _.mean(fluencyScores) : 0;
+            let fluencyScore = fluencyScores.length > 0 ? _.mean(fluencyScores) : 0;
+            fluencyScore=Math.ceil(fluencyScore)
             const fluency_bucket=getBucket(studentClass,fluencyScore)
             const fluency_feedback = getFeedback(array_3d, studentClass, fluencyScore, "fluency");
             scoreNumber.fluency.score = fluencyScore;
             scoreNumber.fluency.bucket = fluency_bucket;
             scoreNumber.feedback.fluency = fluency_feedback;
             
-            const prosodyScore = prosodyScores.length > 0 ? _.mean(prosodyScores) : 0;
+            let prosodyScore = prosodyScores.length > 0 ? _.mean(prosodyScores) : 0;
+            prosodyScore=Math.ceil(prosodyScore)
             const prosody_bucket=getBucket(studentClass,prosodyScore)
             const prosody_feedback = getFeedback(array_3d, studentClass, prosodyScore, "prosody");
             scoreNumber.prosody.score = prosodyScore;

@@ -1,4 +1,4 @@
-import { supabaseClient as supabase } from ".";
+import { supabaseClient as supabase } from "./index";
 
 
 export async function UpdateRCASLJ(assementType:string,studentId:string,bucket:string,studentClass:number){
