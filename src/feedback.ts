@@ -74,218 +74,203 @@
 }
 
 // Example 3D array
-  export const array_3d = [
+export const array_3d = [
     [
-        [
-            "Needs lots of practice in Vocabulary",
-            "Needs a lot of practice",
-            "Needs a lot of practice",
-        ],
-        [
-            "Focus on practicing individual sounds with clear modeling and repetition to build accurate pronunciation.",
-            "Practice reading aloud regularly with easy texts to build speed and smoothness.",
-            "Practise more on the intonation and rhythm ",
-        ],
-        [
-            "Concentrate on practicing specific sounds with clear examples and frequent repetition to develop pronunciation.",
-            "Work on reading aloud with slightly more challenging texts and focus on improving speed and expression.",
-            "Intensive Practice in intonation and rhythm to approximate the accaptable standards ",
-        ],
-        [
-            "Work on practicing distinct sounds with clear demonstrations and regular repetition to achieve correct pronunciation.",
-            "Practice with varied texts to refine your pacing and expression while aiming for smoother and more natural reading.",
-            "Fairly good.More practice required",
-        ],
-        [
-            "Work on refining sound differences and stress patterns with focused exercises and everyday conversation practice.",
-            "Practice with diverse texts, concentrating on expression and rhythm to achieve a more natural reading style.",
-            "Practice more on the correct rhythm and intonation",
-        ],
-        [
-            "Work on refining sound differences and stress patterns through specific drills and frequent speaking practice.",
-            "Challenge yourself with varied and complex texts while focusing on smoothness and natural expression.",
-            "Of a high standard. A little more practice will go a long way",
-        ],
-        [
-            "Keep up the good work by refining intonation and rhythm through continued practice.",
-            "You're doing great with your reading fluency; keep it up by trying new texts to make your reading even smoother.",
-            "Excellent way of reading.Keep it up ",
-        ],
-        [
-            "Keep up the excellent work by further perfecting your intonation and rhythm with ongoing practice.",
-            "You're excelling in reading fluency, keep challenging yourself with new and varied texts to maintain and enhance your skills.",
-            "Excellent intonation and rhythm. Maintain the high standards",
-        ],
+      [
+        "Needs lots of practice in Vocabulary",
+        "Needs a great deal of practice",
+        "Concentrated and focussed practice is needed to achieve acceptable levels of intonation and rhythm"
+      ],
+      [
+        "Focus on practicing individual sounds with clear modeling and repetition to build accurate pronunciation.",
+        "Practice reading aloud regularly with easy texts to build speed and smoothness.",
+        "Regular practice in intonation and rhythm must be adopted"
+      ],
+      [
+        "Concentrate on practicing specific sounds with clear examples and frequent repetition to develop pronunciation.",
+        "Work on reading aloud with slightly more challenging texts and focus on improving speed and expression.",
+        "More practice and focus on the context is needed for better intonation and rhythm."
+      ],
+      [
+        "Work on practicing distinct sounds with clear demonstrations and regular repetition to achieve correct pronunciation.",
+        "Practice with varied texts to refine your pacing and expression while aiming for smoother and more natural reading.",
+        "Fairly good.More practice required"
+      ],
+      [
+        "Work on refining sound differences and stress patterns with focused exercises and everyday conversation practice.",
+        "Practice with diverse texts, concentrating on expression and rhythm to achieve a more natural reading style.",
+        "Practice more on the correct rhythm and intonation"
+      ],
+      [
+        "Work on refining sound differences and stress patterns through specific drills and frequent speaking practice.",
+        "Challenge yourself with varied and complex texts while focusing on smoothness and natural expression.",
+        "Of a high standard. A little more practice will go a long way"
+      ],
+      [
+        "Keep up the good work by refining intonation and rhythm through continued practice.",
+        "You're doing great with your reading fluency; keep it up by trying new texts to make your reading even smoother.",
+        "Excellent way of reading.Keep it up"
+      ],
+      [
+        "Keep up the excellent work by further perfecting your intonation and rhythm with ongoing practice.",
+        "You're excelling in reading fluency, keep challenging yourself with new and varied texts to maintain and enhance your skills.",
+        "Excellent intonation and rhythm. Maintain the high standards"
+      ]
     ],
     [
-        [
-            "Needs a lot of practice",
-            "Needs a lot of practice",
-            "Needs a lot of practice",
-        ],
-        [
-            "A lot of practice required to acquire correct pronunciation",
-            "You must acquire good fluency through regular loud reading",
-            "Practice more on the correct rhythm and intonation",
-        ],
-        [
-            "You need regular practice of the content words regularly",
-            "You must put in some more regular practice for better fluency",
-            "Put in regular practice for correct rhythm and intonation",
-        ],
-        [
-            "Good but there is scope for improvement",
-            "Fluency is adequate but can be better",
-            "Acceptable rhythm and intonation but there is room for improvement",
-        ],
-        [
-            "You are quite good but can refine your pronunciation",
-            "You are quite fluent but can do better",
-            "You are quite good but can do better",
-        ],
-        [
-            "Very good pronunciation and some more practice will make you perfect",
-            "Fluency is quite good and practice will make you better",
-            "Put in some more practice for better intonation and rhythm",
-        ],
-        [
-            "Excellent pronunciation standards.Very close to the benchmark",
-            "Fluency is very good.A little more practice required",
-            "Intonation and rhythm is very good",
-        ],
-        [
-            "Almost perfect pronunciation.Keep it up",
-            "Fluency is excellent.",
-            "Intonation and rhythm is excellent",
-        ],
+      [
+        "Needs a lot of practice",
+        "Must work very hard to be able to read and comprehend well",
+        "Repetitive practice is required to reach acceptable levels of intonation and rhythm"
+      ],
+      [
+        "A lot of practice required to acquire correct pronunciation",
+        "You must acquire good fluency through regular loud reading",
+        "Practice more on the correct rhythm and intonation"
+      ],
+      [
+        "You need regular practice of the content words regularly",
+        "You must put in some more regular practice for better fluency",
+        "Put in regular practice for correct rhythm and intonation"
+      ],
+      [
+        "Good but there is scope for improvement",
+        "Fluency is adequate but can be better",
+        "Acceptable rhythm and intonation but there is room for improvement"
+      ],
+      [
+        "You are quite good but can refine your pronunciation",
+        "You are quite fluent but can do better",
+        ""
+      ],
+      [
+        "Very good pronunciation and some more practice will make you perfect",
+        "Fluency is quite good and practice will make you better",
+        "Put in some more practice for better intonation and rhythm"
+      ],
+      [
+        "Excellent pronunciation standards.Very close to the benchmark",
+        "Fluency is very good.A little more practice required",
+        "Intonation and rhythm is very good"
+      ],
+      [
+        "Almost perfect pronunciation.Keep it up",
+        "Fluency is excellent.",
+        "Intonation and rhythm is excellent"
+      ]
     ],
     [
-        [
-            "Needs a lot of practice",
-            "Needs a lot of practice",
-            "Needs a lot of practice",
-        ],
-        [
-            "You have to practice very hard to be understood by others",
-            "Speak slowly and carefully to be understood by others",
-            "You should avoid single tone and bring in rhythm in your speaking",
-        ],
-        [
-            "You have to put in more efforts to improve your pronunciation",
-            "Practice more to improve your fluency",
-            "Work harder to improve your stress and intonation patterns",
-        ],
-        [
-            "You are at mid-level and must work some more to improve your pronunciation",
-            "Some more effort must be put in to improve your fluency",
-            "Focus more on improving your stress and intonation",
-        ],
-        [
-            "Put in more effort to improve your pronunciation",
-            "You need to speak better and faster to improve your fluency",
-            "Concentrate more on improving your stress and intonation",
-        ],
-        [
-            "You have reached a good standard.Practice more for better pronunciation",
-            "You are quite fluent.Some more practice will take you closer to the benchmark",
-            "Some more practice is needed to improve stress and intonation",
-        ],
-        [
-            "Excellent pronunciation standards.Very close to the benchmark",
-            "Excellent fluency. Maintain the standards well",
-            "Excellent stress and intonation.Keep it up.",
-        ],
-        [
-            "Near perfect pronunciation. Keep it up!",
-            "Outstanding fluency! Maintain the standard!",
-            "You have reached the benchmark level in stress and intonation!",
-        ],
+      [
+        "Needs a lot of practice",
+        "A  great amount of time must be given to improve this skill for good reading skills",
+        "High level of practice must be put in to reach acceptable levels of intonation  and rhythm"
+      ],
+      [
+        "You have to practice very hard to be understood by others",
+        "Speak slowly and carefully to be understood by others",
+        "You should avoid single tone and bring in rhythm in your speaking"
+      ],
+      [
+        "You have to put in more efforts to improve your pronunciation",
+        "Practice more to improve your fluency",
+        "Work harder to improve your stress and intonation patterns"
+      ],
+      [
+        "You are at mid-level and must work some more to improve your pronunciation",
+        "Some more effort must be put in to improve your fluency",
+        "Focus more on improving your stress and intonation"
+      ],
+      [
+        "Put in more effort to improve your pronunciation",
+        "You need to speak better and faster to improve your fluency",
+        "Concentrate more on improving your stress and intonation"
+      ],
+      [
+        "Good pronunciation however, consistent practice would contribute for better pronunciation",
+        "You are quite fluent. Some more practice will take you closer to the benchmark.",
+        "More practice and focus on the context is needed for better intonation and rhythm."
+      ],
+      [
+        "Excellent pronunciation standards.Very close to the benchmark",
+        "Excellent fluency. Maintain the standards well.",
+        "Excellent stress and intonation.Keep it up!"
+      ],
+      [
+        "Near perfect pronunciation. Keep it up!",
+        "Outstanding fluency! Maintain the standard!",
+        "You have reached the benchmark level in stress and intonation!"
+      ]
     ],
     [
-        [
-            "Needs a lot of practice",
-            "Needs a lot of practice",
-            "Needs a lot of practice",
-        ],
-        [
-            "You have to work extremely hard to be understood by anyone",
-            "Don’t speak in fragments.Maintain a flow when speaking",
-            "Monotone is not acceptable. Learn to cultivate the correct the rhythm and intonation!",
-        ],
-        [
-            "Pronunciation standard is at mid-level.Focus on improving your pronunciation",
-            "Fluency is just adequate.Put in more effort to improve your fluency",
-            "Do not use the same tone for all words.Variations in rhythm and tone are important",
-        ],
-        [
-            "Good pronunciation but some more practice required",
-            "Fluency is good but some more improvement should be shown!",
-            "Intonation and rhythm levels are adequate but more practice is needed",
-        ],
-        [
-            "Very good pronunciation and some more practice will make you perfect",
-            "Excellent fluency. Maintain the standards well",
-            "High standard of intonation ",
-        ],
-        [
-            "Good pronunciation levels but more practice is required",
-            "Good fluency.More improvement needed>",
-            "Quite good stress and intonation",
-        ],
-        [
-            "Very good pronunciatio! Some more practice will make you perfect",
-            "Fluency is excellent! Maintain the standards!",
-            "Excellent stress and intonation levels.Keep it up.",
-        ],
-        [
-            "Excellent pronunciation standards.Very close to the benchmark",
-            "Outstanding fluency! Maintain the standard!",
-            "Near perfection.Keep the standards cotinuously high",
-        ],
+      [
+        "Needs a lot of practice",
+        "At this level, dedicated time must be given to improve fluency. This practice will help to understand all subjects well.",
+        "To be socially and linguistically acceptable, great efforts must be put in to acquire good intonation and rhythm"
+      ],
+      [
+        "You have to work extremely hard to be understood by anyone.",
+        "Don’t speak in fragments.Maintain a flow when speaking",
+        "Monotone is not acceptable. Learn to cultivate the correct the rhythm and intonation!"
+      ],
+      [
+        "Stay focused and pay attention to improve your pronunciations.",
+        "Fluency is just adequate. Put in more effort to improve your fluency",
+        "Do not use the same tone for all words.Variations in rhythm and tone are important!"
+      ],
+      [
+        "Good pronunciation but some more practice required",
+        "Fluency is good but some more improvement should be shown!",
+        "Intonation and rhythm levels are adequate but more practice is needed."
+      ],
+      [
+        "Very good pronunciation and some more practice will make you perfect",
+        "Fairly good fluency. Little more efforts will help to improve.",
+        "Good attempt. Consistent efforts will help to improve the intonation and stress."
+      ],
+      [
+        "Good pronunciation but a little more consious efforts would help in improving your pronunciation.",
+        "Good fluency. More improvement needed",
+        "Good efforts in sustaining the stress and intonation. Put in a little more efforts to attain perfection."
+      ],
+      [
+        "Very good pronunciatio! Some more practice will make you perfect.",
+        "Fluency is excellent! Maintain the standards!",
+        "Excellent stress and intonation levels.Keep it up!"
+      ],
+      [
+        "Excellent pronunciation standards.Very close to the benchmark.",
+        "Outstanding fluency! Maintain the standard!",
+        "Near perfection.Keep the standards cotinuously high!"
+      ]
     ],
     [
-        [
-            "N/A",
-            "N/A",
-            "N/A",
-        ],
-        [
-            "N/A",
-            "N/A",
-            "N/A",
-        ],
-        [
-            "N/A",
-            "N/A",
-            "N/A",
-        ],
-        [
-            "N/A",
-            "N/A",
-            "N/A",
-        ],
-        [
-            "N/A",
-            "N/A",
-            "N/A",
-        ],
-        [
-            "N/A",
-            "N/A",
-            "N/A",
-        ],
-        [
-            "N/A",
-            "N/A",
-            "N/A",
-        ],
-        [
-            "N/A",
-            "N/A",
-            "N/A",
-        ],
-    ],
-]
+      [
+        "N/A", "N/A", "N/A"
+      ],
+      [
+        "N/A", "N/A", "N/A"
+      ],
+      [
+        "N/A", "N/A", "N/A"
+      ],
+      [
+        "N/A", "N/A", "N/A"
+      ],
+      [
+        "N/A", "N/A", "N/A"
+      ],
+      [
+        "N/A", "N/A", "N/A"
+      ],
+      [
+        "N/A", "N/A", "N/A"
+      ],
+      [
+        "N/A", "N/A", "N/A"
+      ]
+    ]
+  ];
+  
 
 
 
