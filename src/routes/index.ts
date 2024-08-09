@@ -113,9 +113,9 @@ ReportRouter.post(
           const total_again = (partB_ka_score + report.partA_score.score) / 2;
           let final_bucket = "Emergent";
 
-          if (total_again >= 0 && total_again <= 49.9) {
+          if (total_again >= 0 && total_again <=50) {
             final_bucket = "Emergent";
-          } else if (total_again >= 50 && total_again <= 79.9) {
+          } else if (total_again > 50 && total_again <80) {
             final_bucket = "Transitional";
           } else {
             final_bucket = "Proficient";
