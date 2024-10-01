@@ -16,7 +16,8 @@ export const main = async (fileBuffer: Buffer, subKey: string, serviceRegion: st
         filePushStream.processWavBuffer(fileBuffer, pushStream);
         const audioConfig = sdk.AudioConfig.fromStreamInput(pushStream);
         const speechConfig = sdk.SpeechConfig.fromSubscription(subKey, serviceRegion);
- 
+        
+        console.log("Started Converting")
         const enableProsodyAssessment = true;
         const pronunciationAssessmentConfig = new sdk.PronunciationAssessmentConfig(
             reference_text,
@@ -29,7 +30,7 @@ export const main = async (fileBuffer: Buffer, subKey: string, serviceRegion: st
         speechConfig.speechRecognitionLanguage = "en-GB";
         const reco = new sdk.SpeechRecognizer(speechConfig, audioConfig);
         pronunciationAssessmentConfig.applyTo(reco);
- 
+        
         const scoreNumber = {
             accuracy:{
                 score:0,

@@ -20,7 +20,6 @@ app.use(cors(corsConfig));
 
 
 app.use(express.json());
-ConnectToDB();
 
 app.use('/api',ReportRouter);
 
