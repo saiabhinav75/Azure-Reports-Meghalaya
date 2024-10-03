@@ -85,8 +85,9 @@ ReportRouter.post(
     const assessment_id = req.body.assessment_id;
     const studentClass = req.body.studentClass;
     const assessmentType = req.body.assessmentType;
+    const rca = req.body.rca;
     // const token = authHeader && authHeader.split(' ')[1]
-    const reference_text = fs.readFileSync(`SEKHAR/${studentClass}.txt`,'utf-8')
+    const reference_text = fs.readFileSync(`SEKHAR/${rca}/${studentClass}.txt`,'utf-8')
     console.log(reference_text)
     if (!base64Audio) {
       res.status(400).json("Invalid Input");
